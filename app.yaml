@@ -1,0 +1,13 @@
+application: echo
+runtime: go
+api_version: go1
+
+handlers:
+- url: /static
+  static_dir: static
+
+- url: /template
+  static_dir: template
+
+- url: /.*
+  script: _go_app
